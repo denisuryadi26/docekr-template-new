@@ -5,13 +5,13 @@ FROM node:current
 WORKDIR /usr/src/app
 
 # Salin package.json dan package-lock.json
-COPY docker/reactjs/package*.json ./
+COPY publick/reactjs/package*.json ./
 
 # Install dependencies
 RUN npm install
 
 # Salin seluruh kode
-COPY docker/reactjs/. .
+COPY publick/reactjs/. .
 
 # Expose port 3000
 EXPOSE 3000
