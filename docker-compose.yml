@@ -83,8 +83,8 @@ services:
       backend:
         ipv4_address: 172.20.1.50
     volumes:
-      - ./public/reactjs:/app   # Ubah path ke direktori ReactJS yang benar
-      - /app/node_modules
+      - ./public/reactjs:/app  # Sesuaikan direktori untuk aplikasi React
+      - /app/node_modules  # Jika node_modules tidak diperlukan, bisa dihapus atau disesuaikan
     ports:
       - 3000:3000
     depends_on:
@@ -92,7 +92,6 @@ services:
 
 volumes:
   mysql_data:
-  src:
 
 networks:
   backend:
